@@ -1,0 +1,15 @@
+{% extends "dashboard/base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h1>Dashboard</h1>
+    <img src="https://images.evetech.net/characters/{{ user.id }}/portrait?size=128" alt="{{ user.username }} portrait">
+    <img src="https://images.evetech.net/corporations/{{ corporation.id }}/logo?size=128" alt="{{ corporation.name }} logo">
+    <img src="https://images.evetech.net/alliances/{{ alliance.id }}/logo?size=128" alt="{{ alliance.name }} logo">
+    <p>Welcome, {{ user.username }}!</p>
+    <p>Corporation: {{ corporation.name }}</p>
+    <p>Alliance: {{ alliance.name }}</p>
+  </div>
+{% endblock %}

@@ -1,0 +1,30 @@
+/* Sticky Footer */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+}
+
+/* Messages */
+#message-container {
+  margin-bottom: 25px;
+}
+
+.message {
+  background-color: #212121;
+  border-radius: 3px;
+  margin: 5px auto 0;
+  max-width: 40vw;
+}

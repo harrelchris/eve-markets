@@ -1,0 +1,27 @@
+{% load static %}
+<header class="p-3 mb-3 border-bottom">
+  <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+    <a href="{% url 'dashboard:index' %}" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
+      <img src="{% static 'img/logo.svg' %}" alt="Maximum Logo">
+    </a>
+
+    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+      <li><a href="#" class="nav-link px-2 link-body-emphasis">Overview</a></li>
+      <li><a href="#" class="nav-link px-2 link-body-emphasis">Inventory</a></li>
+      <li><a href="#" class="nav-link px-2 link-body-emphasis">Customers</a></li>
+      <li><a href="#" class="nav-link px-2 link-body-emphasis">Products</a></li>
+    </ul>
+
+    <div class="dropdown text-end">
+      <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="https://images.evetech.net/characters/{{ user.id }}/portrait?size=128" alt="{{ user.username }} portrait" class="rounded" width="64" height="64">
+      </a>
+      <ul class="dropdown-menu text-small" style="">
+        <li><a class="dropdown-item" href="{% url 'dashboard:index' %}">Dashboard</a></li>
+        <li><a class="dropdown-item" href="{% url 'dashboard:settings' %}">Settings</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><a class="dropdown-item" href="{% url 'sso:logout' %}">Sign out</a></li>
+      </ul>
+    </div>
+  </div>
+</header>
